@@ -1,0 +1,4 @@
+{
+    "watch": ["src" , ".env"],
+    "exec":"tsc && node ./dist/server/index.js"
+}
