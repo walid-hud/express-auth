@@ -1,14 +1,15 @@
+import { Document } from "mongoose";
 import mongoose from "mongoose";
-export interface IUser {
+export interface IUser extends Document {
   name: string;
   email: string;
   password: string;
   last_login: Date;
   is_account_verified: boolean;
-  verification_token_hash?: string;
-  verification_token_expire_at?: Date;
-  reset_password_token?: string;
-  reset_password_expire_at?: Date;
+  verification_token_hash?: string| null;
+  verification_token_expire_at?: Date | null;
+  reset_password_token?: string | null;
+  reset_password_expire_at?: Date | null;
 }
 const user_schema = new mongoose.Schema<IUser>(
   {
