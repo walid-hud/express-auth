@@ -10,7 +10,7 @@ const mail_trap_client = new MailtrapClient({
 
 const sender = {
   email: "hello@demomailtrap.co",
-  name: "Mailtrap",
+  name: "Mailtrap Test",
 };
 
 async function send_verification_email(user: IUser, raw_token: string) {
@@ -25,7 +25,7 @@ async function send_verification_email(user: IUser, raw_token: string) {
         raw_token,
       )
       .replace("{name}" , user.name)
-      .replace("{token_expire_date}" , user.verification_token_expire_at!.toDateString()),
+      .replace("{token_expire_date}" , user.verification_token_expire_at!.toISOString()),
       category: "Email Verification",
     });
     if(response.success){
