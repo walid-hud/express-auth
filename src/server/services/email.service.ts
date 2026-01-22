@@ -37,7 +37,7 @@ const send_email_callback = (
   if (err) {
     console.error("email sending error ", err);
   } else {
-    console.info("email sent successfully ", info);
+    console.info("email sent successfully ", info.response);
   }
 };
 
