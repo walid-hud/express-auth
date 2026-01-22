@@ -32,6 +32,9 @@ importers:
       mongoose:
         specifier: ^9.1.4
         version: 9.1.4
+      nodemailer:
+        specifier: ^7.0.12
+        version: 7.0.12
       nodemon:
         specifier: ^3.1.11
         version: 3.1.11
@@ -2284,8 +2287,7 @@ snapshots:
 
   negotiator@1.0.0: {}
 
-  nodemailer@7.0.12:
-    optional: true
+  nodemailer@7.0.12: {}
 
   nodemon@3.1.11:
     dependencies:

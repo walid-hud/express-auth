@@ -1,5 +1,5 @@
 import type { RequestHandler } from "express";
-import userModel, { type IUser } from "../../models/User.model.js";
+import userModel from "../../models/User.model.js";
 import { hash_verification_code } from "../../../shared/utils/generate.js";
 import { send_welcome_email } from "../../services/email.service.js";
 

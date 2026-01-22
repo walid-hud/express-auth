@@ -55,6 +55,7 @@ const signup: RequestHandler = async (req, res, next) => {
       user: { ...user.toObject(), password: null },
     });
 
+    console.log("verification token : " , raw_token)
     await send_verification_email(user , raw_token)
   } catch (e) {
     if (e instanceof Error) {
